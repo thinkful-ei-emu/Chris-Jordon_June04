@@ -74,19 +74,46 @@ rocksWarning("Florida");
 wildFire("Maryland");
 flashFlooding("California");
 
-*/
+
 
 function tMovement(arr) {
   let posMove = arr.filter(num => num[0] >= 0 && num[1] >= 0);
-  //   for(let i=0; i<num.length;i++) {
-  //     return num[i] >= 0;
-  //   }
-  // });
-  return posMove;
+  let posSteps = posMove.map(x => x[0] + x[1]);
+  let results = posSteps.forEach(function(element, increment) {
+    console.log(`Movement #${increment+1}: ${element} steps`)
+  }
+  );
 }
 
-
 const turtle = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
-const steve = [1 ,2 ,3 ,4 ,5, -1 ,-2, -3, 4];
-//console.log(turtle[1][1]);
 console.log(tMovement(turtle));
+
+*/
+
+function reduce(arr){
+
+  let words = arr.split(" ");
+
+  const reducer = words.reduce((accumulator, currentValue) => {
+    if(words.length === 3){
+      accumulator += ' ';
+    } else {
+      accumulator += words[currentValue.length - 1].toUpperCase();
+    }
+  
+    return accumulator;
+  })
+  return reducer;
+
+}
+
+  /* for(let i = 0; i < words.length; i++){
+    if (words[i] === 3){
+      return ' ';
+    }
+  } else {
+    return words[words.length - 1].toUpperCase */
+ 
+
+const input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'
+console.log(reduce(input));
