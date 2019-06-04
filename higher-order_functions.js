@@ -1,4 +1,6 @@
 'use strict';
+/*
+
 //Functions as arguments (1)
 function repeat (fn, n){
   for(let i = 0; i < n; i++){
@@ -16,6 +18,8 @@ function goodbye(){
 
 repeat(hello, 5);
 repeat(goodbye, 5);
+
+
 
 //Functions as arguments (2)
 function filter(arr, fn) {
@@ -44,4 +48,25 @@ const filteredNames = filter(myNames, function(name) {
 });
 
 console.log(filteredNames) // => ['Rich', 'Ray']
-// <---- DO NOT EDIT BETWEEN THESE LINES
+// <---- DO NOT EDIT BETWEEN THESE LINES  
+
+
+
+//Functions as return values
+
+function hazardWarningCreator(typeOfWarning){
+  let warningCounter = 0;
+  function message(location){
+    warningCounter++;
+    console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+    console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
+  }
+  return message();
+}
+
+const rocksWarning = hazardWarningCreator("Rocks on the road");
+const wildFire = hazardWarningCreator("Forests on fire");
+const flashFlooding = hazardWarningCreator("Major flooding");
+
+*/
+
