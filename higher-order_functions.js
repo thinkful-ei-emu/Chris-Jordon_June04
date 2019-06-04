@@ -29,6 +29,8 @@ function filter(arr, fn) {
   return newArray;
 }
 
+//console.log(newArray.push(arr,fn) => 
+
 // DO NOT EDIT BETWEEN THESE LINES, BUT DO READ THE CODE ----->
 // First we setup an array of strings we plan to filter:
 const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
