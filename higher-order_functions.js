@@ -76,4 +76,17 @@ flashFlooding("California");
 
 */
 
+function tMovement(arr) {
+  let posMove = arr.filter(function (num) {
+    for(let i=0; i<num.length;i++) {
+      return num[i] >= 0;
+    }
+  });
+  return posMove;
+}
 
+
+const turtle = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+const steve = [1 ,2 ,3 ,4 ,5, -1 ,-2, -3, 4];
+//console.log(turtle[1][1]);
+console.log(tMovement(turtle));
