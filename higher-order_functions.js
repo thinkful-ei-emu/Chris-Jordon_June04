@@ -77,11 +77,11 @@ flashFlooding("California");
 */
 
 function tMovement(arr) {
-  let posMove = arr.filter(function (num) {
-    for(let i=0; i<num.length;i++) {
-      return num[i] >= 0;
-    }
-  });
+  let posMove = arr.filter(num => num[0] >= 0 && num[1] >= 0);
+  //   for(let i=0; i<num.length;i++) {
+  //     return num[i] >= 0;
+  //   }
+  // });
   return posMove;
 }
 
