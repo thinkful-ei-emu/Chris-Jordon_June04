@@ -61,12 +61,19 @@ function hazardWarningCreator(typeOfWarning){
     console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
     console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
   }
-  return message();
+  return message;
 }
 
 const rocksWarning = hazardWarningCreator("Rocks on the road");
 const wildFire = hazardWarningCreator("Forests on fire");
 const flashFlooding = hazardWarningCreator("Major flooding");
 
+rocksWarning("Florida");
+rocksWarning("Florida");
+rocksWarning("Florida");
+wildFire("Maryland");
+flashFlooding("California");
+
 */
+
 
