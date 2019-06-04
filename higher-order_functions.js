@@ -9,11 +9,11 @@ function repeat (fn, n){
 }
 
 function hello(){
-  console.log("Hello world");
+  console.log('Hello world');
 }
 
 function goodbye(){
-  console.log("Goodbye world");
+  console.log('Goodbye world');
 }
 
 repeat(hello, 5);
@@ -47,7 +47,7 @@ const filteredNames = filter(myNames, function(name) {
   return name[0] === 'R';
 });
 
-console.log(filteredNames) // => ['Rich', 'Ray']
+console.log(filteredNames); // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES  
 
 
@@ -64,15 +64,15 @@ function hazardWarningCreator(typeOfWarning){
   return message;
 }
 
-const rocksWarning = hazardWarningCreator("Rocks on the road");
-const wildFire = hazardWarningCreator("Forests on fire");
-const flashFlooding = hazardWarningCreator("Major flooding");
+const rocksWarning = hazardWarningCreator('Rocks on the road');
+const wildFire = hazardWarningCreator('Forests on fire');
+const flashFlooding = hazardWarningCreator('Major flooding');
 
-rocksWarning("Florida");
-rocksWarning("Florida");
-rocksWarning("Florida");
-wildFire("Maryland");
-flashFlooding("California");
+rocksWarning('Florida');
+rocksWarning('Florida');
+rocksWarning('Florida');
+wildFire('Maryland');
+flashFlooding('California');
 
 
 
@@ -80,7 +80,7 @@ function tMovement(arr) {
   let posMove = arr.filter(num => num[0] >= 0 && num[1] >= 0);
   let posSteps = posMove.map(x => x[0] + x[1]);
   let results = posSteps.forEach(function(element, increment) {
-    console.log(`Movement #${increment+1}: ${element} steps`)
+    console.log(`Movement #${increment+1}: ${element} steps`);
   }
   );
 }
@@ -120,5 +120,5 @@ function reduce(arr){
 // }
  
 
-const input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'
+const input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
 console.log(reduce(input));
