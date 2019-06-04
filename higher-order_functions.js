@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 
 //Functions as arguments (1)
 function repeat (fn, n){
@@ -86,33 +86,38 @@ function tMovement(arr) {
 }
 
 const turtle = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
-console.log(tMovement(turtle));
+tMovement(turtle);
 
-*/
+
 
 function reduce(arr){
+  
+  let words = arr.split(' ');
 
-  let words = arr.split(" ");
-
-  const reducer = words.reduce((accumulator, currentValue) => {
-    if(words.length === 3){
+  const reducer = words.reduce((accumulator, word) => {
+    if(word.length === 3){
       accumulator += ' ';
     } else {
-      accumulator += words[currentValue.length - 1].toUpperCase();
+      accumulator += word.substr(word.length - 1).toUpperCase();
     }
   
     return accumulator;
-  })
+  }, '');
   return reducer;
 
 }
-
-  /* for(let i = 0; i < words.length; i++){
-    if (words[i] === 3){
-      return ' ';
-    }
-  } else {
-    return words[words.length - 1].toUpperCase */
+  
+//   let results = '';
+//   for(let i = 0; i < words.length; i++){
+//     if (words[i].length === 3){
+//       results += ' ';
+//     }
+//     else {
+//       results += words[i].substr(words[i].length - 1).toUpperCase(); 
+//     }
+//   }
+//   return results;
+// }
  
 
 const input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'
